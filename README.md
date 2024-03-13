@@ -1,0 +1,1 @@
+Aplicação feita para artigo no dev.to mostrando na prática a utilização da lib LogCaptor para testes de logs, você encontra o artigo neste link: https://dev.to/dsb88/logcaptor-simplificando-o-teste-de-logs-em-apis-rest-java-1a2d

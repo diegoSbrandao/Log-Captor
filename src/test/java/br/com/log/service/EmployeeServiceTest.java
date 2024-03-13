@@ -69,11 +69,11 @@ class EmployeeServiceTest {
 
         assertThat(logCaptor.getLogs())
                 .hasSize(1)
-                .contains("Salvando novo funcionário: {}Employee(id=1, name=Paulo, salary=5000.0, age=30, gender=MAN)");
+                .contains("Salvando novo funcionário: Employee(id=1, name=Paulo, salary=5000.0, age=30, gender=MAN)");
     }
 
     @Test
-    void shouldTestCreateEmployeeTestingLogInSucessX() {
+    void shouldTestCreateEmployeeTestingLogInSucess() {
         // Implementa o método para captura dos logs
         LogCaptor logCaptor = LogCaptor.forClass(EmployeeServiceImpl.class);
 
@@ -84,13 +84,11 @@ class EmployeeServiceTest {
         employee.setAge(30);
         employee.setGender(Gender.MAN);
 
-        assertThrows(NullPointerException.class, () -> {
-            employeeService.createEmployee(employee);
-        });
+        assertThrows(NullPointerException.class, () -> employeeService.createEmployee(employee));
 
         //Cenário de error
         assertThat(logCaptor.getLogs())
-                .contains("Erro ao salvar funcionário: {}");
+                .contains("Erro ao salvar funcionário: ");
     }
 
 

@@ -28,7 +28,7 @@ class EmployeeServiceTest {
     }
 
     @Test
-    void shouldTestcreateEmployeeWhenSucess() {
+    void shouldTestCreateEmployeeWhenSucess() {
         Employee employee = new Employee();
         employee.setName("João Silva");
         employee.setId(1L);
@@ -73,7 +73,7 @@ class EmployeeServiceTest {
     }
 
     @Test
-    void shouldTestCreateEmployeeTestingLogInSucess() {
+    void shouldTestCreateEmployeeTestingLogInfailure() {
         // Implementa o método para captura dos logs
         LogCaptor logCaptor = LogCaptor.forClass(EmployeeServiceImpl.class);
 
